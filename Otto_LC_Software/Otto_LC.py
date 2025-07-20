@@ -1,4 +1,4 @@
-# Here is the software that will have the control logic for the Otto LC robot(Jerry) for the Raspberry Pi Pico.
+# Here is the software that will have the control logic for the Otto LC robot.
 # Written By: Jefferson Charles
 
 # Here are the libraries needed for the program
@@ -26,14 +26,14 @@ CS = 17
 # This is the orientation on the 8x8 LED Matrix. This will allow the LEDs on the Matrix to display things in a normal orientation on the robot.
 Orientation = 3
 
-# Here is where we are initializing the Otto LC Robot (Jerry) along with the 8x8 LED Matrix.
+# Here is where we are initializing the Otto LC Robot along with the 8x8 LED Matrix.
 # The values 1 and 2 are dummy values used to initalize the trigger and echo pins of the Ultrasonic Distance Sensor.
-Jerry = otto9.Otto9()
-Jerry.init(3, 7, 12, 10, True, 20, 1, 2, 19) 
-Jerry.initMATRIX(Din, CS, SCLK, Orientation)
-Jerry.home()
+otto = otto9.Otto9()
+otto.init(3, 7, 12, 10, True, 20, 1, 2, 19) 
+otto.initMATRIX(Din, CS, SCLK, Orientation)
+otto.home()
 
-# This function is responsible for the light sensor integration on Jerry
+# This function is responsible for the light sensor integration on the robot
 def light_levels():
     sensor_value = LDR_Pin.read_u16()  # Here we are reading the ADC value (0 - 65535)
     
@@ -79,113 +79,113 @@ def obstacle_avoidance():
     
     if detected_object != -1 and detected_object <= 30:
         print("Object in front of me")
-        Jerry.putMouth(20)
-        Jerry.playGesture(5)
+        otto.putMouth(20)
+        otto.playGesture(5)
         time.sleep_ms(500)
-        # This will make Jerry walk back a little bit and turn once it detects an object in front of it
-        Jerry.walk(2, 1000, -1)
-        Jerry.turn(2, 1000, 1)
+        # This will make the robot walk back a little bit and turn once it detects an object in front of it
+        otto.walk(2, 1000, -1)
+        otto.turn(2, 1000, 1)
         time.sleep_ms(500)
     else:
         print("No object in front of me")
             
 
-# Here are the functions for the main control logic for Jerry
+# Here are the functions for the main control logic for the robot
 
 # This function will be responsible for the movement options the robot can perform, while implementing obstacle avoidance
-def jerry_movements():
-    Jerry.walk(4, 1000, 1) # Walking forward
+def otto_movements():
+    otto.walk(4, 1000, 1) # Walking forward
     time.sleep_ms(200)
-    Jerry.walk(4, 1000, -1) # Walking backwards
+    otto.walk(4, 1000, -1) # Walking backwards
     time.sleep_ms(200)
-    Jerry.turn(2, 1000, 1) # Turning to the left
+    otto.turn(2, 1000, 1) # Turning to the left
     time.sleep_ms(200)
-    Jerry.turn(2, 1000, -1) # Turning to the right
+    otto.turn(2, 1000, -1) # Turning to the right
     time.sleep_ms(200)
-    Jerry.bend(1, 500, 1) # Bending the left foot
+    otto.bend(1, 500, 1) # Bending the left foot
     time.sleep_ms(200)
-    Jerry.bend(1, 2000, -1) # Bending the right foot
+    otto.bend(1, 2000, -1) # Bending the right foot
     time.sleep_ms(200)
-    Jerry.home() # Makes the robot go to its default position
+    otto.home() # Makes the robot go to its default position
     time.sleep_ms(100)
 
 # This function will be responsible for the robot dancing
-def jerry_dances():
-    Jerry.shakeLeg(1, 1500, 1) # Left
-    Jerry.shakeLeg(1, 2000, -1) # Right
-    Jerry.moonwalker(4, 1000, 25, 1) # Left
-    Jerry.moonwalker(4, 1000, 25, -1) # Right
-    Jerry.crusaito(3, 1000, 20, 1) # Left
-    Jerry.crusaito(3, 1000, 20, -1) # Right
+def otto_dances():
+    otto.shakeLeg(1, 1500, 1) # Left
+    otto.shakeLeg(1, 2000, -1) # Right
+    otto.moonwalker(4, 1000, 25, 1) # Left
+    otto.moonwalker(4, 1000, 25, -1) # Right
+    otto.crusaito(3, 1000, 20, 1) # Left
+    otto.crusaito(3, 1000, 20, -1) # Right
     time.sleep_ms(100)
-    Jerry.flapping(3, 1000, 20, 1) # Left
-    Jerry.flapping(3, 1000, 20, -1) # Right
+    otto.flapping(3, 1000, 20, 1) # Left
+    otto.flapping(3, 1000, 20, -1) # Right
     time.sleep_ms(100)
-    Jerry.swing(3, 1000, 20)
-    Jerry.tiptoeSwing(3, 1000, 20)
-    Jerry.jitter(3, 1000, 20)
-    Jerry.updown(3, 1500, 20)
-    Jerry.ascendingTurn(3, 1000, 50)
-    Jerry.jump(1, 2000)
-    Jerry.home()
+    otto.swing(3, 1000, 20)
+    otto.tiptoeSwing(3, 1000, 20)
+    otto.jitter(3, 1000, 20)
+    otto.updown(3, 1500, 20)
+    otto.ascendingTurn(3, 1000, 50)
+    otto.jump(1, 2000)
+    otto.home()
     time.sleep_ms(100)
 
 # This function is responsible for sounds that the robot can produce
-def jerry_sounds():
-    Jerry.sing(0) # Connection sound
-    Jerry.sing(1) # Disconnection sound
-    Jerry.sing(3) # OHOOH sound
-    Jerry.sing(18) # Buttonpressed sound
+def otto_sounds():
+    otto.sing(0) # Connection sound
+    otto.sing(1) # Disconnection sound
+    otto.sing(3) # OHOOH sound
+    otto.sing(18) # Buttonpressed sound
 
 # This function is responsible for gestures performed by the robot
-def jerry_gestures():
-    Jerry.playGesture(0) # Happy gesture
+def otto_gestures():
+    otto.playGesture(0) # Happy gesture
     time.sleep_ms(600)
-    Jerry.playGesture(2) # Sad gesture
+    otto.playGesture(2) # Sad gesture
     time.sleep_ms(600)
-    Jerry.playGesture(11) # Victory gesture
+    otto.playGesture(11) # Victory gesture
     time.sleep_ms(600)
-    Jerry.playGesture(3) # Sleeping gesture
+    otto.playGesture(3) # Sleeping gesture
     time.sleep_ms(600)
 
 # This function is responsible for displaying the emotions of the robot
-def jerry_emotions():
-    Jerry.putMouth(10) # Smile emotion
+def otto_emotions():
+    otto.putMouth(10) # Smile emotion
     time.sleep_ms(700)
-    Jerry.putMouth(11) # Happyopen emotion
+    otto.putMouth(11) # Happyopen emotion
     time.sleep_ms(700)
-    Jerry.putMouth(22) # Sad emotion
+    otto.putMouth(22) # Sad emotion
     time.sleep_ms(700)
-    Jerry.putMouth(20) # Confused emotion
+    otto.putMouth(20) # Confused emotion
     time.sleep_ms(700)    
     
 # This loop will be responsible for 
 while True:
-    Jerry.home() # Sets the robot in its neutral position
+    otto.home() # Sets the robot in its neutral position
     time.sleep(1)
     
     current_light = light_levels() # Here will be the light sensor values produced by the robot
     
     # If the room the robot is in is dark, then the robot will perform these actions instead
     if current_light == "dark":
-        Jerry.putMouth(24) # Sadclosed emotion
-        Jerry.sing(2) # Surprise sound
-        Jerry.playGesture(5) # Confused gesture
+        otto.putMouth(24) # Sadclosed emotion
+        otto.sing(2) # Surprise sound
+        otto.playGesture(5) # Confused gesture
         
     # If there is enough light in the room the robot is currently in, then it will perform its movements    
     elif current_light == "bright":
         # This function call is responsible for the implementation of obstacle avoidance on the robot
         obstacle_avoidance()
         
-        jerry_movements()
+        otto_movements()
         time.sleep(1)
-        jerry_dances()
+        otto_dances()
         time.sleep(1)
-        jerry_sounds()
+        otto_sounds()
         time.sleep(1)
-        jerry_gestures()
+        otto_gestures()
         time.sleep(1)
-        jerry_emotions()
+        otto_emotions()
         time.sleep(1)
     
     # Here we have a 500ms delay in the loop
