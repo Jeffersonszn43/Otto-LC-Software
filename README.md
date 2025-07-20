@@ -2,7 +2,7 @@
 
 ##### This goal of this project is to learn how to build your own Otto LC robot and program the robot to do various creative movements using MicroPython. This repository will contain the skeleton code that you will have to finish to correctly make your robot do the required movements.
 
-## Created By:
+## Created By
 ##### Corey Chang
 ##### Jefferson Charles
 
