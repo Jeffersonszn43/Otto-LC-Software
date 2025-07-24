@@ -6,7 +6,7 @@
 ##### Perry Weinthal
 ##### Corey Chang
 ##### Jefferson Charles
-##### Aaron Handcock
+##### Aaron Hancock
 
 ## Project Components
 
