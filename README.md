@@ -6,6 +6,10 @@
 ##### Perry Weinthal
 ##### Corey Chang
 ##### Jefferson Charles
+<<<<<<< HEAD
+=======
+##### Aaron Hancock
+>>>>>>> e14fa33330e06bf4c927475ab0c3b9ab20216498
 
 ## Project Components
 
@@ -44,4 +48,6 @@
 ##### This project is inspired from the OttoDIY, OttoDIYLib, OttoDIYPython, and the Otto LC robot platform and libraries below:
 
 - [OttoDIY](https://www.ottodiy.com/)
+- [OttoDIYLib](https://github.com/OttoDIY/OttoDIYLib)
+- [OttoDIYPython](https://github.com/OttoDIY/OttoDIYPython)
 - [Otto LC](https://hackaday.io/project/26244-otto-lc)
