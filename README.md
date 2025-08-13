@@ -26,7 +26,7 @@
 
 - [OttoDIYPython](https://github.com/Jeffersonszn43/Otto-LC-Software/releases/download/v1.0.0/OttoLCMicroPythonLibrary.zip)
 
-##### The files in the zip file must be in the same directory as the MicroPython skeleton program for your Otto LC robot. Instructions on how to bring the files over from your local file explorer to the file explorer of the Raspberry Pi Pico H can be found in the setup section below.
+##### The files in the zip file must be in the same directory as the MicroPython demo and skeleton programs for your Otto LC robot. Instructions on how to bring the files over from your local file explorer to the file explorer of the Raspberry Pi Pico H can be found in the setup section below.
 
 ##### This section will contain information on how to setup your environment for working with your robots:
 
