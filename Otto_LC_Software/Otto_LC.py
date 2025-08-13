@@ -1,6 +1,9 @@
 # Here is the skeleton code that will have the control logic for your Otto LC robot.
 # Written By: Jefferson Charles
 
+# Enter your full name here: 
+# Enter your Z Number here: 
+
 # Here are the libraries needed for the program
 import otto9, time
 from machine import Pin, ADC, time_pulse_us
