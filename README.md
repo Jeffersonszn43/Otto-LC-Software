@@ -37,7 +37,14 @@
 5. Next, you have to connect the Raspberry Pi Pico H to your computer via USB while holding on to the BOOTSEL button on the board. This will open up the mass storage file explorer of the Pico where you will take the MicroPython firmware file that you just downloaded and copy and paste the file into the mass storage device of the Pico. After completing this, MicroPython should be setup on your Raspberry Pi Pico H board. Now when you go to the Thonny IDE, you should see the Raspberry Pi Pico as an option to choose for the COM port that is used for the Pico on the bottom right corner and you should choose the option that has the full Raspberry Pi Pico name.
 6. Now that you have MicroPython setup on your Raspberry Pi Pico H Microcontroller, you must open the file explorer for the Pico and bring the contents of the OttoDIYPython library that you downloaded earlier to the file explorer of the Pico. Before you continue, you must make sure that the contents of the folder is unzipped and able to be brought over to the file explorer of the Pico. To open up the file explorer of the Pico you must go to View -> Files in Thonny. If you selected the com port of the Pico on the bottom right corner, you should see a split window that shows the file explorer of the directory that you are in in your local computer on top and the file explorer of the Pico on the bottom shown on the left side of Thonny. Locate where you downloaded the OttoDIYPython library and you are going to select all of the source code files in that folder. With all of the files selected, right click and select `Upload to /` to bring all of the files of the library to the file explorer of the Pico. 
 7. Now, you should be setup to start working on the skeleton program to work with your robots. Go to the `Otto_LC_Software` folder and download the `Otto_LC.py` program and bring the file to the file explorer of the Pico using the same method used for bringing the files of the Otto MicroPython library over from your local computer to the Raspberry Pi Pico H. You will work on and run your code on your robot from Thonny. 
-8. Before working on your skeleton program after building your robot, you must run the `demo.py` program under the `Otto_LC_Software` folder to test to see if you built your robot correctly and to make sure that your robot is fully functional.     
+8. Before working on your skeleton program after building your robot, you must run the `demo.py` program under the `Otto_LC_Software` folder to test to see if you built your robot correctly and to make sure that your robot is fully functional.  
+
+## Project Demonstration
+
+##### This section will have a project demonstration video that will demonstrate the functionalities of our custom built Otto LC robot using a custon web application built for users to interact with the robot. 
+
+- [![Otto LC Robotic Project Demo](https://img.youtube.com/vi/iyfeJGkd0QI/0.jpg)](https://youtu.be/iyfeJGkd0QI)
+
 
 ## Acknowledgements
 
