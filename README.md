@@ -41,7 +41,7 @@
 
 ## Project Demonstration
 
-##### This section will have a project demonstration video that will demonstrate the functionalities of our custom built Otto LC robot using a custon web application built for users to interact with the robot. 
+##### This section will have a project demonstration video that will demonstrate the functionalities of our custom built Otto LC robot using a custon web application built for users to interact with the robot. This project demonstration demos a version of our robot that was built to interact with our web application, but the web application will be separate from this version of our Otto LC robotic project. 
 
 <p align="center">
   <a href="https://youtu.be/iyfeJGkd0QI">
