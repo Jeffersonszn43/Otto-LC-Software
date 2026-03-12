@@ -51,7 +51,7 @@
 
 ## Acknowledgements
 
-##### This project is inspired from the OttoDIY and the Otto LC robot platform below:
+##### All of the software written and our Otto LC design are based off the OttoDIY, OttoDIYLib, OttoDIYPython, and the Otto LC robot platform and libraries below:
 
 - [OttoDIY](https://www.ottodiy.com/)
 - [OttoDIYLib](https://github.com/OttoDIY/OttoDIYLib)
